@@ -2,6 +2,10 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 const config = require('./config.json')
 
+  client.on('ready', () => {
+    console.log(`Bot iniciado com sucesso!`)
+  })
+
 client.on('message', message => {
   if (message.author.bot) return
   if (!message.content.startsWith(config.prefix)) return
@@ -15,8 +19,5 @@ client.on('message', message => {
     console.error(err)
   }
 
-  client.on('ready', () => {
-    console.log(`Bot iniciado com sucesso!`)
-  })
 })
 client.login(process.env.TOKEN)
