@@ -36,5 +36,6 @@ module.exports.run = async (client, message, args) =>{
         .addField("👮 Por:", message.author)
         .addField("📋 Motivo:", motivo)
         .setTimestamp()
-        .setFooter("© Comunidade drade")
+        .setFooter("© Comunidade trade")
         message.channel.send(banido)
+}
